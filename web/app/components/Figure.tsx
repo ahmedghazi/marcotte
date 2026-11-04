@@ -35,15 +35,16 @@ const Figure = ({ index, src, width, height, align, overlay }: Props) => {
         alt=''
         width={width}
         height={height}
+        loading='eager'
       />
       {overlay && (
         <Image
-          // width > height ? "is-landscape" : "is-portrait",
           className={clsx("img-overlay")}
           src={overlay.src}
           alt=''
           width={overlay.width}
           height={overlay.height}
+          loading='eager'
           style={{
             width: `${overlay.w}%`,
             height: "auto",
