@@ -21,11 +21,11 @@ export async function generateMetadata(): Promise<Metadata> {
 const HomePage = async function Page() {
   const data = [
     {
-      src: "/media/flowers/Marcotte_1.jpg",
+      src: "/media/flowers-optim/Marcotte_1-optim.webp",
       width: 4880,
       height: 3393,
       overlay: {
-        src: "/media/graphics/Berger-Inverted.png",
+        src: "/media/graphics-optim/Berger-Inverted-optim.webp",
         width: 342,
         height: 391,
         w: 23.75,
@@ -35,11 +35,11 @@ const HomePage = async function Page() {
       },
     },
     {
-      src: "/media/flowers/Marcotte_2.jpg",
+      src: "/media/flowers-optim/Marcotte_2-optim.webp",
       width: 2846,
       height: 1910,
       overlay: {
-        src: "/media/graphics/AdorazionedeiMagi.jpg",
+        src: "/media/graphics-optim/AdorazionedeiMagi-optim.webp",
         width: 498,
         height: 472,
         w: 34.58,
@@ -49,12 +49,12 @@ const HomePage = async function Page() {
       },
     },
     {
-      src: "/media/flowers/Marcotte_3.jpg",
+      src: "/media/flowers-optim/Marcotte_3-optim.webp",
       width: 2101,
       height: 2619,
       align: "right",
       overlay: {
-        src: "/media/graphics/Dickinson.jpg",
+        src: "/media/graphics-optim/Dickinson-optim.webp",
         width: 624,
         height: 237,
         w: 43.33,
@@ -64,11 +64,11 @@ const HomePage = async function Page() {
       },
     },
     {
-      src: "/media/flowers/Marcotte_4.jpg",
+      src: "/media/flowers-optim/Marcotte_4-optim.webp",
       width: 2557,
       height: 1990,
       overlay: {
-        src: "/media/graphics/Reich-Inverted.jpg",
+        src: "/media/graphics-optim/Reich-Inverted-optim.webp",
         width: 598,
         height: 400,
         w: 41.53,
@@ -78,12 +78,12 @@ const HomePage = async function Page() {
       },
     },
     {
-      src: "/media/flowers/Marcotte_5.jpg",
+      src: "/media/flowers-optim/Marcotte_5-optim.webp",
       width: 3410,
       height: 4149,
       align: "right",
       overlay: {
-        src: "/media/graphics/Ponge.jpg",
+        src: "/media/graphics-optim/Ponge-optim.webp",
         width: 558,
         height: 361,
         w: 38.75,
@@ -93,12 +93,12 @@ const HomePage = async function Page() {
       },
     },
     {
-      src: "/media/flowers/Marcotte_6.jpg",
+      src: "/media/flowers-optim/Marcotte_6-optim.webp",
       width: 1761,
       height: 2143,
       align: "left",
       overlay: {
-        src: "/media/graphics/Stalker.jpg",
+        src: "/media/graphics-optim/Stalker-optim.webp",
         width: 408,
         height: 271,
         w: 28.33,
@@ -107,11 +107,11 @@ const HomePage = async function Page() {
       },
     },
     {
-      src: "/media/flowers/Marcotte_7.jpg",
+      src: "/media/flowers-optim/Marcotte_7-optim.webp",
       width: 4105,
       height: 3202,
       overlay: {
-        src: "/media/graphics/Celan.jpg",
+        src: "/media/graphics-optim/Celan-optim.webp",
         width: 1085,
         height: 740,
         w: 75.35,
@@ -121,12 +121,12 @@ const HomePage = async function Page() {
       },
     },
     {
-      src: "/media/flowers/Marcotte_8.jpg",
+      src: "/media/flowers-optim/Marcotte_8-optim.webp",
       width: 2136,
       height: 2845,
       align: "left",
       overlay: {
-        src: "/media/graphics/IHF.jpg",
+        src: "/media/graphics-optim/IHF-optim.webp",
         width: 1059,
         height: 847,
         w: 73.54,
@@ -136,12 +136,12 @@ const HomePage = async function Page() {
       },
     },
     {
-      src: "/media/flowers/Marcotte_9.jpg",
+      src: "/media/flowers-optim/Marcotte_9-optim.webp",
       width: 1610,
       height: 2170,
       align: "center",
       overlay: {
-        src: "/media/graphics/Arrangement.jpg",
+        src: "/media/graphics-optim/Arrangement-optim.webp",
         width: 236,
         height: 313,
         w: 16.39,
@@ -151,11 +151,11 @@ const HomePage = async function Page() {
       },
     },
     {
-      src: "/media/flowers/Marcotte_10.jpg",
+      src: "/media/flowers-optim/Marcotte_10-optim.webp",
       width: 2171,
       height: 2901,
       overlay: {
-        src: "/media/graphics/Nostalghia.jpg",
+        src: "/media/graphics-optim/Nostalghia-optim.webp",
         width: 421,
         height: 251,
         w: 29.24,
@@ -164,12 +164,12 @@ const HomePage = async function Page() {
       },
     },
     {
-      src: "/media/flowers/Marcotte_11.jpg",
+      src: "/media/flowers-optim/Marcotte_11-optim.webp",
       width: 2036,
       height: 2627,
       align: "center",
       overlay: {
-        src: "/media/graphics/Artine.jpg",
+        src: "/media/graphics-optim/Artine-optim.webp",
         width: 510,
         height: 658,
         w: 35.42,
@@ -178,7 +178,11 @@ const HomePage = async function Page() {
         blend: "multiply",
       },
     },
-    { src: "/media/flowers/Marcotte_12.jpg", width: 2139, height: 1626 },
+    {
+      src: "/media/flowers-optim/Marcotte_12-optim.webp",
+      width: 2139,
+      height: 1626,
+    },
   ];
   return (
     <div className='template template--home' data-template='home'>
