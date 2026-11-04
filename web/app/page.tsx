@@ -1,0 +1,203 @@
+import { Metadata } from "next";
+import website from "./config/website";
+import Image from "next/image";
+import Dock from "./components/Dock";
+import { clsx } from "clsx";
+import Figure from "./components/Figure";
+
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    title: website?.title,
+    description: website.description,
+    openGraph: {
+      images: website.image,
+    },
+  };
+}
+
+// export const revalidate = 3600; // revalidate every hour
+
+// type PageProps = {}
+const HomePage = async function Page() {
+  const data = [
+    {
+      src: "/media/flowers/Marcotte_1.jpg",
+      width: 4880,
+      height: 3393,
+      overlay: {
+        src: "/media/graphics/Berger-Inverted.png",
+        width: 342,
+        height: 391,
+        w: 23.75,
+        x: 5.9,
+        y: 47.36,
+        blend: "screen",
+      },
+    },
+    {
+      src: "/media/flowers/Marcotte_2.jpg",
+      width: 2846,
+      height: 1910,
+      overlay: {
+        src: "/media/graphics/AdorazionedeiMagi.jpg",
+        width: 498,
+        height: 472,
+        w: 34.58,
+        x: 61.25,
+        y: 29.79,
+        blend: "unset",
+      },
+    },
+    {
+      src: "/media/flowers/Marcotte_3.jpg",
+      width: 2101,
+      height: 2619,
+      align: "right",
+      overlay: {
+        src: "/media/graphics/Dickinson.jpg",
+        width: 624,
+        height: 237,
+        w: 43.33,
+        x: 3.89,
+        y: 55.47,
+        blend: "multiply",
+      },
+    },
+    {
+      src: "/media/flowers/Marcotte_4.jpg",
+      width: 2557,
+      height: 1990,
+      overlay: {
+        src: "/media/graphics/Reich-Inverted.jpg",
+        width: 598,
+        height: 400,
+        w: 41.53,
+        x: 57.22,
+        y: 14.55,
+        blend: "screen",
+      },
+    },
+    {
+      src: "/media/flowers/Marcotte_5.jpg",
+      width: 3410,
+      height: 4149,
+      align: "right",
+      overlay: {
+        src: "/media/graphics/Ponge.jpg",
+        width: 558,
+        height: 361,
+        w: 38.75,
+        x: 7.64,
+        y: 47.95,
+        blend: "multiply",
+      },
+    },
+    {
+      src: "/media/flowers/Marcotte_6.jpg",
+      width: 1761,
+      height: 2143,
+      align: "left",
+      overlay: {
+        src: "/media/graphics/Stalker.jpg",
+        width: 408,
+        height: 271,
+        w: 28.33,
+        x: 64.1,
+        y: 37.11,
+      },
+    },
+    {
+      src: "/media/flowers/Marcotte_7.jpg",
+      width: 4105,
+      height: 3202,
+      overlay: {
+        src: "/media/graphics/Celan.jpg",
+        width: 1085,
+        height: 740,
+        w: 75.35,
+        x: 14.72,
+        y: 14.55,
+        blend: "multiply",
+      },
+    },
+    {
+      src: "/media/flowers/Marcotte_8.jpg",
+      width: 2136,
+      height: 2845,
+      align: "left",
+      overlay: {
+        src: "/media/graphics/IHF.jpg",
+        width: 1059,
+        height: 847,
+        w: 73.54,
+        x: 27.64,
+        y: 10.94,
+        blend: "multiply",
+      },
+    },
+    {
+      src: "/media/flowers/Marcotte_9.jpg",
+      width: 1610,
+      height: 2170,
+      align: "center",
+      overlay: {
+        src: "/media/graphics/Arrangement.jpg",
+        width: 236,
+        height: 313,
+        w: 16.39,
+        x: 76.32,
+        y: 35.16,
+        blend: "multiply",
+      },
+    },
+    {
+      src: "/media/flowers/Marcotte_10.jpg",
+      width: 2171,
+      height: 2901,
+      overlay: {
+        src: "/media/graphics/Nostalghia.jpg",
+        width: 421,
+        height: 251,
+        w: 29.24,
+        x: 12.85,
+        y: 55.76,
+      },
+    },
+    {
+      src: "/media/flowers/Marcotte_11.jpg",
+      width: 2036,
+      height: 2627,
+      align: "center",
+      overlay: {
+        src: "/media/graphics/Artine.jpg",
+        width: 510,
+        height: 658,
+        w: 35.42,
+        x: 5.21,
+        y: 22.56,
+        blend: "multiply",
+      },
+    },
+    { src: "/media/flowers/Marcotte_12.jpg", width: 2139, height: 1626 },
+  ];
+  return (
+    <div className='template template--home' data-template='home'>
+      <Dock data={data} />
+      <div className='images'>
+        {data?.map((item, i) => (
+          <Figure
+            key={i}
+            index={i}
+            src={item.src}
+            width={item.width}
+            height={item.height}
+            align={item.align as "left" | "center" | "right" | undefined}
+            overlay={item.overlay}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default HomePage;

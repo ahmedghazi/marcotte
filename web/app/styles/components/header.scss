@@ -1,0 +1,32 @@
+@use "../variables";
+
+header {
+  padding: var(--spacing-lg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 51;
+  pointer-events: none;
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  a {
+    pointer-events: all;
+  }
+  @media (max-width: variables.$md) {
+    padding: 25px 33px;
+
+    .logo-marcotte {
+      width: 189px;
+      height: 17px;
+    }
+    .logo-flower {
+      width: 35px;
+      height: 33px;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@use "../variables";
+
+.template--home {
+  .dock {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    z-index: 51;
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    .dock-item {
+      cursor: pointer;
+      transition: opacity 0.2s ease-in-out;
+      &:hover,
+      &.is-active {
+        opacity: 0;
+      }
+    }
+  }
+  .image {
+    display: flex;
+    position: relative;
+    img.visual {
+      height: 100vh;
+      width: 100dvw;
+      object-fit: cover;
+
+      &.is-portrait {
+        object-fit: contain;
+        &:not(.align-left, .align-center, .align-right) {
+          object-fit: cover;
+        }
+        &.align-left {
+          object-position: left center;
+        }
+        &.align-center {
+          object-position: center center;
+        }
+        &.align-right {
+          object-position: right center;
+        }
+      }
+    }
+    img.img-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+@media all and (max-width: variables.$sm) {
+  .template--home {
+    .dock {
+      top: var(--header-h);
+      bottom: var(--footer-h);
+    }
+    .image {
+      img.visual {
+        &.is-portrait {
+          object-fit: cover;
+        }
+      }
+      img.img-overlay {
+        display: none;
+      }
+    }
+  }
+}
