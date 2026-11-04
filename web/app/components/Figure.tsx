@@ -1,25 +1,13 @@
 import clsx from "clsx";
 import Image from "next/image";
+import { ImageProps } from "../types/type";
 
 type Props = {
-  index: number;
-  src: string;
-  width: number;
-  height: number;
-  align?: "left" | "center" | "right" | undefined;
-
-  overlay?: {
-    src: string;
-    width: number;
-    height: number;
-    w: number;
-    x: number;
-    y: number;
-    blend?: string;
-  };
+  data: ImageProps;
+  onLoad?: () => void;
 };
-
-const Figure = ({ index, src, width, height, align, overlay }: Props) => {
+const Figure = ({ data, onLoad }: Props) => {
+  const { index, src, width, height, align, overlay } = data;
   return (
     <figure
       className='image snap'
@@ -36,6 +24,7 @@ const Figure = ({ index, src, width, height, align, overlay }: Props) => {
         width={width}
         height={height}
         loading='eager'
+        onLoad={onLoad}
       />
       {overlay && (
         <Image

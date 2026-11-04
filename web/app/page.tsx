@@ -4,13 +4,16 @@ import Image from "next/image";
 import Dock from "./components/Dock";
 import { clsx } from "clsx";
 import Figure from "./components/Figure";
+import Images from "./components/Images";
+import data from "@/public/data.json";
+import { ImageProps } from "./types/type";
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
     title: website?.title,
     description: website.description,
     openGraph: {
-      images: website.image,
+      images: website.url + "/media/flowers-optim/Marcotte_1-optim.webp",
     },
   };
 }
@@ -19,187 +22,15 @@ export async function generateMetadata(): Promise<Metadata> {
 
 // type PageProps = {}
 const HomePage = async function Page() {
-  const data = [
-    {
-      src: "/media/flowers-optim/Marcotte_1-optim.webp",
-      width: 4880,
-      height: 3393,
-      overlay: {
-        src: "/media/graphics-optim/Berger-Inverted-optim.webp",
-        width: 342,
-        height: 391,
-        w: 23.75,
-        x: 5.9,
-        y: 47.36,
-        blend: "screen",
-      },
-    },
-    {
-      src: "/media/flowers-optim/Marcotte_2-optim.webp",
-      width: 2846,
-      height: 1910,
-      overlay: {
-        src: "/media/graphics-optim/AdorazionedeiMagi-optim.webp",
-        width: 498,
-        height: 472,
-        w: 34.58,
-        x: 61.25,
-        y: 29.79,
-        blend: "unset",
-      },
-    },
-    {
-      src: "/media/flowers-optim/Marcotte_3-optim.webp",
-      width: 2101,
-      height: 2619,
-      align: "right",
-      overlay: {
-        src: "/media/graphics-optim/Dickinson-optim.webp",
-        width: 624,
-        height: 237,
-        w: 43.33,
-        x: 3.89,
-        y: 55.47,
-        blend: "multiply",
-      },
-    },
-    {
-      src: "/media/flowers-optim/Marcotte_4-optim.webp",
-      width: 2557,
-      height: 1990,
-      overlay: {
-        src: "/media/graphics-optim/Reich-Inverted-optim.webp",
-        width: 598,
-        height: 400,
-        w: 41.53,
-        x: 57.22,
-        y: 14.55,
-        blend: "screen",
-      },
-    },
-    {
-      src: "/media/flowers-optim/Marcotte_5-optim.webp",
-      width: 3410,
-      height: 4149,
-      align: "right",
-      overlay: {
-        src: "/media/graphics-optim/Ponge-optim.webp",
-        width: 558,
-        height: 361,
-        w: 38.75,
-        x: 7.64,
-        y: 47.95,
-        blend: "multiply",
-      },
-    },
-    {
-      src: "/media/flowers-optim/Marcotte_6-optim.webp",
-      width: 1761,
-      height: 2143,
-      align: "left",
-      overlay: {
-        src: "/media/graphics-optim/Stalker-optim.webp",
-        width: 408,
-        height: 271,
-        w: 28.33,
-        x: 64.1,
-        y: 37.11,
-      },
-    },
-    {
-      src: "/media/flowers-optim/Marcotte_7-optim.webp",
-      width: 4105,
-      height: 3202,
-      overlay: {
-        src: "/media/graphics-optim/Celan-optim.webp",
-        width: 1085,
-        height: 740,
-        w: 75.35,
-        x: 14.72,
-        y: 14.55,
-        blend: "multiply",
-      },
-    },
-    {
-      src: "/media/flowers-optim/Marcotte_8-optim.webp",
-      width: 2136,
-      height: 2845,
-      align: "left",
-      overlay: {
-        src: "/media/graphics-optim/IHF-optim.webp",
-        width: 1059,
-        height: 847,
-        w: 73.54,
-        x: 27.64,
-        y: 10.94,
-        blend: "multiply",
-      },
-    },
-    {
-      src: "/media/flowers-optim/Marcotte_9-optim.webp",
-      width: 1610,
-      height: 2170,
-      align: "center",
-      overlay: {
-        src: "/media/graphics-optim/Arrangement-optim.webp",
-        width: 236,
-        height: 313,
-        w: 16.39,
-        x: 76.32,
-        y: 35.16,
-        blend: "multiply",
-      },
-    },
-    {
-      src: "/media/flowers-optim/Marcotte_10-optim.webp",
-      width: 2171,
-      height: 2901,
-      overlay: {
-        src: "/media/graphics-optim/Nostalghia-optim.webp",
-        width: 421,
-        height: 251,
-        w: 29.24,
-        x: 12.85,
-        y: 55.76,
-      },
-    },
-    {
-      src: "/media/flowers-optim/Marcotte_11-optim.webp",
-      width: 2036,
-      height: 2627,
-      align: "center",
-      overlay: {
-        src: "/media/graphics-optim/Artine-optim.webp",
-        width: 510,
-        height: 658,
-        w: 35.42,
-        x: 5.21,
-        y: 22.56,
-        blend: "multiply",
-      },
-    },
-    {
-      src: "/media/flowers-optim/Marcotte_12-optim.webp",
-      width: 2139,
-      height: 1626,
-    },
-  ];
+  const images = data as ImageProps[];
   return (
     <div className='template template--home' data-template='home'>
-      <Dock data={data} />
-      <div className='images'>
-        {data?.map((item, i) => (
-          <Figure
-            key={i}
-            index={i}
-            src={item.src}
-            width={item.width}
-            height={item.height}
-            align={item.align as "left" | "center" | "right" | undefined}
-            overlay={item.overlay}
-          />
-        ))}
-      </div>
+      {images && (
+        <>
+          <Dock data={images} />
+          <Images data={images} />
+        </>
+      )}
     </div>
   );
 };

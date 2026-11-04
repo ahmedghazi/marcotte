@@ -4,7 +4,7 @@ const website = {
   titleAlt: "Marcotte", // Title for JSONLD
   description: "Floral design in Paris, Inquiries : contact@marcotte-paris.com",
   headline: "Marcotte - Agence de communication digitale", // Headline for schema.org JSONLD
-  url: "https://marcotte.fr", // Domain of your site. No trailing slash!
+  url: "https://marcotte-preprod.vercel.app", // Domain of your site. No trailing slash!
   image: "", // Used for SEO
   ogLanguage: "fr_FR", // Facebook Language
 

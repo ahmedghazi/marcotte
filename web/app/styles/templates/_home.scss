@@ -24,6 +24,13 @@
       }
     }
   }
+  .images {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    &.is-loaded {
+      opacity: 1;
+    }
+  }
   .image {
     display: flex;
     position: relative;
