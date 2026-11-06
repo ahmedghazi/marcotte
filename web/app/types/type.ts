@@ -12,6 +12,6 @@ export type ImageProps = {
     w: number;
     x: number;
     y: number;
-    blend?: string;
+    blend?: "normal" | "multiply" | "screen" | "overlay" | "darken" | "lighten";
   };
 };
