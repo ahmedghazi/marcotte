@@ -1,0 +1,13 @@
+.wheel-scroller {
+  position: relative; // children offsetTop relative to the scroller
+  height: 100vh; // needs a fixed height to overflow (100% resolves to auto without a sized parent)
+  height: 100dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

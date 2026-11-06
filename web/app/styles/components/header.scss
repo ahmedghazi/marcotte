@@ -14,8 +14,16 @@ header {
     align-items: center;
     justify-content: space-between;
   }
-  a {
+  a,
+  img {
     pointer-events: all;
+  }
+  .btn-flower {
+    display: flex;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
   }
   @media (max-width: variables.$md) {
     padding: 25px 33px;

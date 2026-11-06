@@ -12,10 +12,10 @@ body {
   // overflow-y: auto;
   background-color: var(--color-bg);
   // @include debugFiletX(50%);
-  scroll-snap-type: y mandatory;
-  overflow: hidden;
+  // scroll-snap-type: y mandatory;
+  // overflow: hidden;
   .snap {
-    scroll-snap-align: start;
+    // scroll-snap-align: start;
   }
 }
 
