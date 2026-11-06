@@ -26,6 +26,11 @@ const MarcinAntiqueStandardBook = localFont({
       weight: "500",
       style: "normal",
     },
+    {
+      path: "./styles/fonts/MarcinAntiqueStandard-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
   ],
 });
 

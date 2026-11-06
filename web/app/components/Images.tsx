@@ -16,6 +16,8 @@ const Images = ({ data }: Props) => {
   return (
     <div className={clsx("images", loaded && "is-loaded")}>
       <WheelScroller>
+        <div className='h-screen'></div>
+
         {data?.map((item: ImageProps, i: number) => (
           <Figure
             key={i}

@@ -28,7 +28,6 @@ const HomePage = async function Page() {
       {images && (
         <>
           <Dock data={images} />
-
           <Images data={images} />
         </>
       )}

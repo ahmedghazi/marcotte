@@ -113,7 +113,8 @@ button {
   &.is-current-page {
     // color: var(--color-hover);
     // color: var(--color-hover);
-    color: rgba(var(--color-accent-rgb), 0.5);
+    // color: rgba(var(--color-accent-rgb), 0.5);
+    text-decoration: underline;
   }
 }
 a[aria-current="page"],

@@ -13,7 +13,7 @@ type Props = {
 
 const Dock = ({ data }: Props) => {
   const [factor, setFactor] = useState(1);
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
 
   const handleResize = () => {
