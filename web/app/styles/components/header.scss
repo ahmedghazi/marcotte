@@ -27,6 +27,10 @@ header {
   // }
   mix-blend-mode: multiply;
 
+  .btn-logo,
+  .btn-jardin {
+    pointer-events: all;
+  }
   .btn-jardin {
     display: flex;
     padding: 0;
