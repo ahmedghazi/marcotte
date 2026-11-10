@@ -18,12 +18,22 @@ header {
   img {
     pointer-events: all;
   }
-  .btn-flower {
+  // .btn-flower {
+  //   display: flex;
+  //   padding: 0;
+  //   border: 0;
+  //   background: none;
+  //   cursor: pointer;
+  // }
+  mix-blend-mode: multiply;
+
+  .btn-jardin {
     display: flex;
     padding: 0;
     border: 0;
     background: none;
     cursor: pointer;
+    mix-blend-mode: multiply;
   }
   @media (max-width: variables.$md) {
     padding: 25px 33px;
@@ -32,9 +42,9 @@ header {
       width: 189px;
       height: 17px;
     }
-    .logo-flower {
-      width: 35px;
-      height: 33px;
-    }
+    // .logo-flower {
+    //   width: 35px;
+    //   height: 33px;
+    // }
   }
 }

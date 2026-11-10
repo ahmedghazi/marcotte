@@ -23,17 +23,18 @@ export default function Header() {
         />
         <button
           type='button'
-          className='btn-flower'
+          className='btn-jardin bg-blend-multiply'
           aria-pressed={active}
-          onClick={() => setActive(!active)}
-          onMouseEnter={() => setActive(true)}
-          onMouseLeave={() => setActive(false)}>
+          // onClick={() => setActive(!active)}
+          onMouseEnter={() => setActive(!active)}
+          // onMouseLeave={() => setActive(false)}
+        >
           <Image
-            className='logo-flower'
-            src='/marcotte-flower.svg'
-            alt='Marcotte flower'
-            width={41}
-            height={37}
+            className='logo-Jardin'
+            src='/marcotte-Un-Vrai-Jardin.jpg'
+            alt='Marcotte un vrai jardin'
+            width={97}
+            height={53}
           />
         </button>
       </div>

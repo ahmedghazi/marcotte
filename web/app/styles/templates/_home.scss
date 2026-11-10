@@ -17,7 +17,7 @@
     }
     .dock-item {
       cursor: pointer;
-      transition: opacity 0.2s ease-in-out;
+      // transition: opacity 0.2s ease-in-out;
       &:hover,
       &.is-active {
         opacity: 0;
