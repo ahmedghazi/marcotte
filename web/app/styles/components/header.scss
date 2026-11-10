@@ -37,10 +37,17 @@ header {
   }
   @media (max-width: variables.$md) {
     padding: 25px 33px;
-
+    .inner {
+      // justify-content: center;
+    }
     .logo-marcotte {
       width: 189px;
       height: 17px;
+    }
+    .btn-jardin img {
+      // width: 97px;
+      width: auto;
+      height: 26px;
     }
     // .logo-flower {
     //   width: 35px;
