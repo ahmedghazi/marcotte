@@ -23,6 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
 // type PageProps = {}
 const HomePage = async function Page() {
   const images = data as ImageProps[];
+  console.log(images);
   return (
     <div className='template template--home' data-template='home'>
       {images && (
