@@ -59,13 +59,9 @@ const Figure = ({ data, onLoad }: Props) => {
             left: `${overlay.x}%`,
             top: `${overlay.y}%`,
             mixBlendMode: overlay.blend || "normal",
-            transition: "opacity 0.5s ease-in-out, transform 0.5s ease-in-out",
+            // transition: "opacity 0.5s ease-in-out",
             // transitionDelay: "0.5s",
             opacity: displayOverlay ? 1 : 0,
-            transform: displayOverlay ? "translateY(0)" : `translateY(2rem)`,
-            // transform: displayOverlay
-            //   ? "translateX(0)"
-            //   : `translateX(${overlay.x > 50 ? "2rem" : "-2rem"})`,
           }}
         />
       )}
