@@ -12,6 +12,7 @@ type Props = {
 const Images = ({ data }: Props) => {
   // others are lazy, so only wait for the first (visible) image before revealing
   const [loaded, setLoaded] = useState<boolean>(false);
+  console.log(data);
 
   return (
     <div className={clsx("images", loaded && "is-loaded")}>
