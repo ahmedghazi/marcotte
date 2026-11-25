@@ -7,7 +7,7 @@ function NotFoundPage() {
         {/* <div className='h-header-height'></div> */}
         {/* <div className='h-4xl md:h-lg'></div> */}
 
-        <h1 className='mb-lg md:text-2xl'>Oops! Page not found</h1>
+        <h1 className='mb-lg md:text-2xl'>Oops :(! Page not found</h1>
         <div className='mb-2xl'>
           <p>
             Looks like this page doesn’t exist anymore <br />
