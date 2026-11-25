@@ -13,7 +13,8 @@ export async function generateMetadata(): Promise<Metadata> {
     title: website?.title,
     description: website.description,
     openGraph: {
-      images: website.url + "/media/flowers-optim/Marcotte_1-optim.webp",
+      images:
+        website.url + "/media/flowers-optim/Marcotte_Flowers_1-optim.webp",
     },
   };
 }
