@@ -17,7 +17,28 @@ const website = {
   themeColor: "#000000",
   backgroundColor: "#000000",
 
-  instagram: "",
+  // Business info, shared by llms.txt and the Florist JSON-LD
+  founder: "Aïdan Marcotte",
+  summary:
+    "Aïdan Marcotte is a floral designer based in Paris, creating arrangements for weddings, events, brands and private clients.",
+  about:
+    "Marcotte works on bespoke floral design: event and wedding installations, seasonal bouquets, set and editorial styling, and regular arrangements for shops, restaurants and offices.",
+  neighbourhood: "[arrondissement / neighbourhood]", // TODO: studio location in Paris
+  city: "Paris",
+  region: "Île-de-France",
+  country: "FR",
+  areaServed: "Paris and Île-de-France",
+  services: [
+    "weddings",
+    "events",
+    "brand & editorial",
+    "subscriptions",
+    "bouquets",
+  ],
+  languages: ["French", "English"],
+  email: "hello@marcotte.fr",
+
+  instagram: "https://instagram.com/marcotte",
   twitter: "", // Twitter Username
   facebook: "", // Facebook Site Name
   googleAnalyticsID: "",

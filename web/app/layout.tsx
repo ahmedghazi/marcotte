@@ -6,6 +6,7 @@ import "./styles/index.scss";
 
 import "./globals.css";
 import Footer from "./components/Footer";
+import JsonLd from "./components/JsonLd";
 import { PageContextProvider } from "./context/PageContext";
 
 // const geistSans = Geist({
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang='en'
       className={`${MarcinAntiqueStandardBook.className} h-full antialiased`}>
       <body className='min-h-full flex flex-col'>
+        <JsonLd />
         <PageContextProvider>
           <Header />
           <main>{children}</main>
